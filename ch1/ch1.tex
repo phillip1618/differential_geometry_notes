@@ -35,4 +35,49 @@ The level curve above is at "level" 0. In general, we could have a level curve a
 \emph{\bfseries Def'n 1.1.5} \\
 If \( \gamma \) is a parameterized curve, first derivative \( \overset{.}{\gamma} \) is called the tangent vector of \( \gamma \) at point \( \gamma(t) \)
 
+\section{Arc Length}
+
+Developing intuition for arc length \\
+Suppose we have vector \( v = (v_1, ... , v_n) \) \\
+\( ||v|| = \sqrt{v_1^2 + ... + v_n^2} \) \\
+\\
+Suppose we have curve \( \gamma \). If \( \delta t \) is very small, then the part of the curve between \( \gamma(t) \) and \( \gamma(t + \delta t) \) is very small and is neraly a straight line, so its length is approximately: \\
+\( || \gamma(t + \delta t) - \gamma (t) || \) \\
+\\
+\( \frac{ (\gamma (t + \delta t) - \gamma(t) ) }{\delta t} \approx \overset{.}{\gamma}(t) \) \\
+\\
+\( || \gamma (t + \delta t) - \gamma(t) || \approx || \overset{.}{\gamma}(t) || \delta t \) \\
+\\
+\\
+\emph{\bfseries Def'n 1.1.1} \\
+The arc-length of a surve \( \gamma \) starting at point \( \gamma(t_0) \) is the function \( s(t) \) given by: \\
+\( s(t) = \int_{t_0}^{t} || \overset{.}{\gamma}(u) || du \) \\
+\\
+Arc length is differentiable function. Indeed if \( s \) is arc-length of curve \( \gamma \) starting at point \( \gamma(t_0) \) we have: \\
+\\
+\( \frac{ds}{dt} = \frac{d}{dt} \int_{t_0}^{t} || \overset{.}{\gamma}(u) || du = || \overset{.}{\gamma}(t) || \)
+\\
+\\
+\emph{\bfseries Def'n 1.2.3} \\
+If \( \gamma:(\alpha, \beta) \longrightarrow \mathcal{R}^n \) is parameterized curve, its speed at point \( \gamma(t) \) is \( || \overset{.}{\gamma}(t) || \) and \( \gamma \) is said to be unit speed curve if \( \overset{.}{\gamma} \) is a unit vector \( \forall t \in (\alpha, \beta) \). 
+\\
+a unit vector is a vector of speed 1. so \( || \overset{.}{\gamma}(t) || = 1 \forall t \in (\alpha, \beta) \).
+\\
+\\
+Dot product \\
+\( a = (a_1, ... , a_n), b = (b_1, ..., b_n) \) \\
+\( a \cdot b = \sum_{i=1}^{n} a_i b_i \) \\
+\\
+\( \frac{d}{dt} (a \cdot b) = \frac{da}{dt} \cdot b + a \cdot \frac{db}{dt} \)
+\\
+\\
+\emph{\bfseries Proposition 1.2.4} \\
+Let \( n(t) \) be unit vector that is smooth function of parameter t. Then dot product \\
+\( \overset{.}{n}(t) \cdot n(t) = 0 \). \\
+\( \forall t \) i.e. \( \overset{.}{n}(t) \) is zero or perpendicular to \( n(t) \forall t \). In particular, if \( \gamma(t) \) is unit speed curve, then \( \overset{..}{\gamma}(t) \) is zero or perpendicular to \( \overset{.}{\gamma} \).
+\\
+\emph{Proof: } Using hte product formula to differentiate both sides of the equation \( n \cdot n = 1 \) with respect to t gives: \\
+\( \overset{.}{n} \cdot n + n \cdot \overset{.}{n} = 0 \) so \( 2 \overset{.}{n} \cdot n = 0 \longrightarrow \overset{.}{n} \cdot n = 0 \). \\
+For the last part of the proposition, replace \( n = \overset{.}{\gamma} \).
+
 \end{document}
